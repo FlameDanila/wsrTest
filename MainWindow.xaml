@@ -1,0 +1,24 @@
+﻿<Window x:Class="wipief.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wipief"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FF349C3D">
+        <Border BorderThickness="1" Margin="135,19,130,22.5" Background="White" CornerRadius ="50"/>
+        <Border BorderThickness="1" Margin="170,43,170,42.5" Background="#FF92D050" CornerRadius ="50">
+            <Grid>
+                <Button Content="Button" Margin="174,257,174,44" Click="Button_Click" Background="#FF349C3D" FontFamily="Comic Sans MS"/>
+                <TextBox x:Name="login" HorizontalAlignment="Left" Height="30" Margin="119,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Comic Sans MS" Width="215" Background="{x:Null}" BorderBrush="White" FontSize="16"/>
+                <TextBox x:Name="password" Text="{Binding Password, Mode=TwoWay, ElementName=MyPasswordBox}" Visibility="Collapsed" Margin="119,196,0,0" TextWrapping="Wrap" FontFamily="Comic Sans MS" Background="{x:Null}" BorderBrush="White" FontSize="16" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="215"/>
+                <TextBlock HorizontalAlignment="Left" Margin="119,64,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Height="35" Width="215" FontSize="18"/>
+                <TextBlock HorizontalAlignment="Left" Margin="119,154,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Height="36" Width="215" FontSize="18"/>
+                <Image Margin="334,0,0,236" Source="logo.png" Stretch="Fill"/>
+                <PasswordBox x:Name="MyPasswordBox" Height="30" Margin="119,196,0,0" Width="215" Background="{x:Null}" BorderBrush="White" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <CheckBox x:Name="ShowPasswordCharsCheckBox" Checked="ShowPasswordCharsCheckBox_Checked" Unchecked="ShowPasswordCharsCheckBox_Unchecked" Margin="349,196,64,104" />
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
